@@ -45,8 +45,7 @@ fun WellnessTaskItem(
     modifier: Modifier = Modifier
 ) {
     Row(
-        modifier = modifier,
-        verticalAlignment = Alignment.CenterVertically
+        modifier = modifier, verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
             modifier = Modifier
@@ -54,7 +53,10 @@ fun WellnessTaskItem(
                 .padding(start = 16.dp),
             text = taskName
         )
-        Checkbox(checked = checked, onCheckedChange = onCheckedChange)
+        Checkbox(
+            checked = checked,
+            onCheckedChange = onCheckedChange
+        )
         IconButton(onClick = onClose) {
             Icon(Icons.Filled.Close, contentDescription = "Close")
         }
